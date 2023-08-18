@@ -55,6 +55,13 @@ This mod addon enhances the Cobblemon experience for Minecraft version 1.19.2, o
 - If you have applied a datapack for alternate Pokémon textures, note that the item containing the Pokémon will inherit its appearance from the datapack.
 - As this is a beta release, anticipate and report bugs. If you find any issues, please create an issue on our GitHub repository.
 
+## Permissions
+- `/poketoitem` permission: `pokemontoitem.command.poketoitem`
+- `/itemtopoke` permission: `pokemontoitem.command.itemtopoke`
+
+## Media Gallery
+Feel free to visit our [Media Gallery](https://modrinth.com/mod/pokemontoitem/gallery) to view screenshots and images showcasing the Pokémon conversion process.
+
 ## Credits
 
 Developed by [Sreeraj S](https://github.com/Sreeraj-S) , this mod addon builds upon the groundwork laid by the Cobblemon mod creators.Special thanks to the creators of the [Cobblemon mod](https://cobblemon.com) for their amazing work.
