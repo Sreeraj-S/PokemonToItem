@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/pokemontoitem.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/pokemontoitem.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/pokemontoitem.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/pokemontoitem.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/pokemontoitem.forge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/pokemontoitem.forge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/pokemontoitem.forge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/pokemontoitem.forge.test.iml" />
+    </modules>
+  </component>
+</project>
