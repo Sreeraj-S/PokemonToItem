@@ -1,0 +1,1 @@
+D:\CWPlugins\test\PokemonToItem\fabric\build\classes\kotlin\main\me\sreeraj\pokemontoitem\fabric\PokemonToItemFabric.class

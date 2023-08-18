@@ -47,13 +47,6 @@ public class PokeToItem {
                 party.remove(playerPokemon);
             }
         }
-
-        public void acceptPokemon(ServerPlayerEntity player, Pokemon playerPokemon) {
-            PlayerPartyStore party = Cobblemon.INSTANCE.getStorage().getParty(player);
-            if (playerPokemon != null) {
-                party.add(playerPokemon);
-            }
-        }
     }
 
     private int self(CommandContext<ServerCommandSource> ctx) {

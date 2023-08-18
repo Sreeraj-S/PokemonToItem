@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../data/mods/gen8bdsp/rulesets.ts"],
+  "sourcesContent": ["export const Rulesets: {[k: string]: ModdedFormatData} = {\r\n\tobtainablemoves: {\r\n\t\tinherit: true,\r\n\t\tbanlist: [\r\n\t\t\t// No valid fathers and can't get in Grand Underground\r\n\t\t\t'Taillow + Boomburst', 'Swellow + Boomburst',\r\n\t\t\t'Plusle + Tearful Look',\r\n\t\t\t'Minun + Tearful Look',\r\n\t\t\t'Luvdisc + Heal Pulse',\r\n\t\t\t'Starly + Detect', 'Staravia + Detect', 'Staraptor + Detect',\r\n\t\t\t'Chatot + Boomburst', 'Chatot + Encore',\r\n\t\t\t'Spiritomb + Foul Play',\r\n\t\t\t'Munchlax + Power-Up Punch', 'Snorlax + Power-Up Punch',\r\n\t\t],\r\n\t},\r\n};\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,MAAM,WAA4C;AAAA,EACxD,iBAAiB;AAAA,IAChB,SAAS;AAAA,IACT,SAAS;AAAA;AAAA,MAER;AAAA,MAAuB;AAAA,MACvB;AAAA,MACA;AAAA,MACA;AAAA,MACA;AAAA,MAAmB;AAAA,MAAqB;AAAA,MACxC;AAAA,MAAsB;AAAA,MACtB;AAAA,MACA;AAAA,MAA6B;AAAA,IAC9B;AAAA,EACD;AACD;",
+  "names": []
+}

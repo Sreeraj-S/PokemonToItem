@@ -1,0 +1,6 @@
+{
+  "permissionlevels": {
+    "command.poketoitem": 2,
+    "command.itemtopoke": 2
+  }
+}
