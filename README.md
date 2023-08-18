@@ -57,7 +57,7 @@ This mod addon enhances the Cobblemon experience for Minecraft version 1.19.2, o
 
 ## Credits
 
-Developed by Sreeraj S, this mod addon builds upon the groundwork laid by the Cobblemon mod creators.Special thanks to the creators of the Cobblemon mod for their amazing work.
+Developed by [Sreeraj S], this mod addon builds upon the groundwork laid by the Cobblemon mod creators.Special thanks to the creators of the Cobblemon mod for their amazing work.
 
 For support, feedback, and contributions, visit the official forums or GitHub repository.
 
