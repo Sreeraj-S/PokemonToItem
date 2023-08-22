@@ -5,12 +5,11 @@
   "name": "PokemonToItem",
   "description": "Helps In Converting Pokemon To an Item and vis-versa",
   "authors": [
-    "The Cobblemon Team"
+    "Sreeraj S"
   ],
   "contact": {
-    "homepage": "https://cobblemon.com/",
-    "sources": "https://gitlab.com/cable-mc/cobblemon",
-    "issues": "https://gitlab.com/cable-mc/cobblemon/-/issues"
+    "sources": "https://github.com/Sreeraj-S/PokemonToItem",
+    "issues": "https://github.com/Sreeraj-S/PokemonToItem/issues"
   },
   "environment": "*",
   "entrypoints": {
@@ -30,10 +29,7 @@
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/cobblemon",
-        "modmenu.modrinth": "https://modrinth.com/mod/cobblemon",
-        "modmenu.discord": "https://discord.gg/XnZwHjj2yS",
-        "modmenu.patreon": "https://www.patreon.com/cablemc"
+        "modmenu.modrinth": "https://modrinth.com/mod/pokemontoitem"
       }
     }
   }
