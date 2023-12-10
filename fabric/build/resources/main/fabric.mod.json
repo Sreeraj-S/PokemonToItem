@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "pokemontoitem",
-  "version": "0.0.1_BETA+1.19.2",
+  "version": "0.0.2_BETA+1.20.1",
   "name": "PokemonToItem",
   "description": "Helps In Converting Pokemon To an Item and vis-versa",
   "authors": [
@@ -20,10 +20,10 @@
   },
   "mixins": [],
   "depends": {
-    "fabricloader": ">=0.13.3",
-    "fabric": ">=0.75.1",
-    "architectury": ">=6.5.69",
-    "minecraft": ">=1.19.2",
+    "fabricloader": ">=0.14.21",
+    "fabric": ">=0.89.0",
+    "fabric-api": "*",
+    "minecraft": ">=1.20.0",
     "java": ">=17"
   },
   "custom": {

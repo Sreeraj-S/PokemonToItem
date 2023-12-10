@@ -276,8 +276,12 @@ const actionHandlers = {
   }
 };
 function shouldNotProcess(message) {
-  return message.startsWith("/") && !message.startsWith("//") || // broadcasted chat command
-  message.startsWith("!");
+  return (
+    // special 'command', blocks things like /log, /raw, /html
+    // (but not a // message)
+    message.startsWith("/") && !message.startsWith("//") || // broadcasted chat command
+    message.startsWith("!")
+  );
 }
 async function getMessageAverages(messages) {
   const counts = {};

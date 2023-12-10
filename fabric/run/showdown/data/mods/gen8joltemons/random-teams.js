@@ -187,7 +187,8 @@ class RandomJoltemonsTeams extends import_random_teams.RandomGen8Teams {
       case "Tinted Lens":
         return (
           // For Sigilyph
-          moves.has("defog") || moves.has("hurricane") && abilities.has("Compound Eyes") || counter.get("Status") > 2 && !counter.setupType
+          moves.has("defog") || // For Butterfree
+          moves.has("hurricane") && abilities.has("Compound Eyes") || counter.get("Status") > 2 && !counter.setupType
         );
       case "Torrent":
         return moves.has("focusenergy") || moves.has("hypervoice");

@@ -3,7 +3,6 @@ package me.sreeraj.pokemontoitem.commands;
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.cobblemon.mod.common.pokemon.evolution.variants.TradeEvolution;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 import me.sreeraj.pokemontoitem.PokemonToItem;
@@ -11,7 +10,6 @@ import me.sreeraj.pokemontoitem.permissions.PokemonToItemPermissions;
 import me.sreeraj.pokemontoitem.screen.PokeToItemHandlerFactory;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
-
 
 import java.util.HashMap;
 import java.util.UUID;

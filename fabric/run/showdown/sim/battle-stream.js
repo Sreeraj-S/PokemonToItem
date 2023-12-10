@@ -125,7 +125,7 @@ ${data}`);
       case "capture":
         this.battle.inputLog.push(`>capture ${message}`);
         const pokemon = this.battle.getPokemonByPNX(message);
-        if (!!pokemon) {
+        if (pokemon) {
           pokemon.capture();
         } else {
           throw new Error(`Capture targeted ${message} but that Pok\xE9mon does not exist.`);

@@ -10,9 +10,8 @@ pluginManagement {
     includeBuild("build-logic")
 }
 plugins {
-    id("ca.stellardrift.polyglot-version-catalogs") version "5.0.1"
+    id("ca.stellardrift.polyglot-version-catalogs") version "6.1.0"
 }
-
 listOf(
     "common",
     "fabric",

@@ -499,7 +499,8 @@ class RoomBattle extends RoomGames.RoomGame {
       return;
     }
     const allPlayersWait = this.players.every((p) => !!p.request.isWait);
-    if (allPlayersWait || rqid && rqid !== "" + request.rqid) {
+    if (allPlayersWait || // too late
+    rqid && rqid !== "" + request.rqid) {
       player.sendRoom(`|error|[Invalid choice] Sorry, too late to make a different move; the next turn has already started`);
       return;
     }
@@ -518,7 +519,8 @@ class RoomBattle extends RoomGames.RoomGame {
       return;
     }
     const allPlayersWait = this.players.every((p) => !!p.request.isWait);
-    if (allPlayersWait || rqid && rqid !== "" + request.rqid) {
+    if (allPlayersWait || // too late
+    rqid && rqid !== "" + request.rqid) {
       player.sendRoom(`|error|[Invalid choice] Sorry, too late to cancel; the next turn has already started`);
       return;
     }

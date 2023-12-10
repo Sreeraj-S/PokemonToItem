@@ -34,14 +34,16 @@ module.exports = __toCommonJS(cobbled_debug_server_exports);
 var import_battle_stream = require("./battle-stream");
 var import_dex = require("./dex");
 var Net = __toESM(require("net"));
+var BagItems = __toESM(require("./bag-items"));
 var CobblemonCache = __toESM(require("./cobblemon-cache"));
+const cobbledModId = "cobblemon";
 function startServer(port) {
   const server = Net.createServer();
-  const battleMap = /* @__PURE__ */ new Map();
+  const battleMap2 = /* @__PURE__ */ new Map();
   server.listen(port, () => {
     console.log("Server listening for connection requests on socket localhost: " + port);
   });
-  server.on("connection", (socket) => onConnection(socket, battleMap));
+  server.on("connection", (socket2) => onConnection(socket2, battleMap2));
 }
 function onData(socket, chunk, battleMap) {
   const data = chunk.toString();
@@ -51,6 +53,7 @@ function onData(socket, chunk, battleMap) {
     if (line.startsWith(">startbattle")) {
       const battleId = line.split(" ")[1];
       battleMap.set(battleId, new import_battle_stream.BattleStream());
+      socket.write("ACK");
     } else if (line === ">getCobbledMoves") {
       getCobbledMoves(socket);
     } else if (line === ">getCobbledAbilityIds") {
@@ -59,11 +62,25 @@ function onData(socket, chunk, battleMap) {
       getCobbledItemIds(socket);
     } else if (line === ">resetSpeciesData") {
       CobblemonCache.resetSpecies();
+      socket.write("ACK");
     } else if (line.startsWith(">receiveSpeciesData")) {
       const speciesJson = line.replace(`>receiveSpeciesData `, "");
       const species = JSON.parse(speciesJson);
       CobblemonCache.registerSpecies(species);
-      console.log("Received", species.id);
+      socket.write("ACK");
+    } else if (line.startsWith(">receiveBagItemData")) {
+      const itemId = line.split(" ")[1];
+      try {
+        var content = line.slice(line.indexOf(itemId) + itemId.length + 1);
+        BagItems.set(itemId, eval(`(${content})`));
+        socket.write("ACK");
+      } catch (e) {
+        console.error(e);
+        socket.write("ERR");
+      }
+      const bagItemJS = line.replace();
+    } else if (line === ">afterCobbledSpeciesInit") {
+      afterCobbledSpeciesInit();
       socket.write("ACK");
     } else {
       const [battleId, showdownMsg] = line.split("~");
@@ -79,37 +96,47 @@ function onData(socket, chunk, battleMap) {
     }
   });
 }
-function writeBattleOutput(socket, battleStream) {
+function writeBattleOutput(socket2, battleStream) {
   const messages = battleStream.buf;
   if (messages.length !== 0) {
-    socket.write(padNumber(messages.length, 8));
+    socket2.write(padNumber(messages.length, 8));
     for (const message of messages) {
-      socket.write(padNumber(message.length, 8) + message);
+      socket2.write(padNumber(message.length, 8) + message);
     }
   } else {
-    writeVoid(socket);
+    writeVoid(socket2);
   }
   battleStream.buf = [];
 }
-function writeVoid(socket) {
-  socket.write("00000000");
+function writeVoid(socket2) {
+  socket2.write("00000000");
 }
-function onConnection(socket, battleMap) {
-  socket.on("data", (chunk) => onData(socket, chunk, battleMap));
-  socket.on("end", () => console.log("Closing connection with the client"));
-  socket.on("error", (err) => console.error(err.stack));
+function onConnection(socket2, battleMap2) {
+  socket2.on("data", (chunk2) => {
+    try {
+      onData(socket2, chunk2, battleMap2);
+    } catch (error) {
+      console.error(error);
+    }
+  });
+  socket2.on("end", () => console.log("Closing connection with the client"));
+  socket2.on("error", (err) => console.error(err.stack));
 }
-function getCobbledMoves(socket) {
-  const payload = JSON.stringify(import_dex.Dex.mod(CobblemonCache.MOD_ID).moves.all());
-  socket.write(padNumber(payload.length, 8) + payload);
+function getCobbledMoves(socket2) {
+  const payload = JSON.stringify(import_dex.Dex.mod(cobbledModId).moves.all());
+  socket2.write(padNumber(payload.length, 8) + payload);
 }
-function getCobbledAbilityIds(socket) {
-  const payload = JSON.stringify(import_dex.Dex.mod(CobblemonCache.MOD_ID).abilities.all().map((ability) => ability.id));
-  socket.write(padNumber(payload.length, 8) + payload);
+function getCobbledAbilityIds(socket2) {
+  const payload = JSON.stringify(import_dex.Dex.mod(cobbledModId).abilities.all().map((ability) => ability.id));
+  socket2.write(padNumber(payload.length, 8) + payload);
 }
-function getCobbledItemIds(socket) {
-  const payload = JSON.stringify(import_dex.Dex.mod(CobblemonCache.MOD_ID).items.all().map((item) => item.id));
-  socket.write(padNumber(payload.length, 8) + payload);
+function getCobbledItemIds(socket2) {
+  const payload = JSON.stringify(import_dex.Dex.mod(cobbledModId).items.all().map((item) => item.id));
+  socket2.write(padNumber(payload.length, 8) + payload);
+}
+function afterCobbledSpeciesInit() {
+  import_dex.Dex.modsLoaded = false;
+  import_dex.Dex.includeMods();
 }
 function padNumber(num, size) {
   let numStr = num.toString();

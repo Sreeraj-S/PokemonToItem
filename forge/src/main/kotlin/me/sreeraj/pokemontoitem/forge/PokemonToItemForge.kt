@@ -2,7 +2,6 @@ package me.sreeraj.pokemontoitem.forge
 
 import dev.architectury.platform.forge.EventBuses
 import me.sreeraj.pokemontoitem.PokemonToItem
-import java.util.*
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent

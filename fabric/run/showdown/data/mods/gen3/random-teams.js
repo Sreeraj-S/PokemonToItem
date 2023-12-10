@@ -108,7 +108,8 @@ class RandomGen3Teams extends import_random_teams.default {
       case "sunnyday":
         return { cull: counter.damagingMoves.size < 2 || moves.has("rest") };
       case "focuspunch":
-        return { cull: counter.damagingMoves.size < 2 || moves.has("rest") || counter.setupType && !moves.has("spore") || !moves.has("substitute") && (counter.get("Physical") < 4 || moves.has("fakeout")) || species.id === "breloom" && (moves.has("machpunch") || moves.has("skyuppercut")) };
+        return { cull: counter.damagingMoves.size < 2 || moves.has("rest") || counter.setupType && !moves.has("spore") || !moves.has("substitute") && (counter.get("Physical") < 4 || moves.has("fakeout")) || // Breloom likes to have coverage
+        species.id === "breloom" && (moves.has("machpunch") || moves.has("skyuppercut")) };
       case "moonlight":
         return { cull: moves.has("wish") || moves.has("protect") };
       case "perishsong":
@@ -212,7 +213,8 @@ class RandomGen3Teams extends import_random_teams.default {
       case "gigadrain":
         return { cull: moves.has("morningsun") || moves.has("toxic") };
       case "hiddenpower":
-        const stabCondition = types.has(move.type) && counter.get(move.type) > 1 && (moves.has("substitute") && !counter.setupType && !moves.has("toxic") || species.id !== "meganium" && moves.has("toxic") && !moves.has("substitute") || restTalk);
+        const stabCondition = types.has(move.type) && counter.get(move.type) > 1 && (moves.has("substitute") && !counter.setupType && !moves.has("toxic") || // This otherwise causes STABless meganium
+        species.id !== "meganium" && moves.has("toxic") && !moves.has("substitute") || restTalk);
         return { cull: stabCondition || move.type === "Grass" && moves.has("sunnyday") && moves.has("solarbeam") };
       case "brickbreak":
       case "crosschop":

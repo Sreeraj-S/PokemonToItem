@@ -1,0 +1,212 @@
+[16:48:29] [main/INFO] (cpw.mods.modlauncher.Launcher) ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.20.1-5, --assetsDir, C:\Users\sathi\.gradle\caches\fabric-loom\assets, --gameDir, ., --fml.forgeVersion, 47.0.50, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, -mixin.config, mixins.pokemontoitem-forge.json, -mixin.config, mixins.pokemontoitem-common.json, --mixin.config, mixins.pokemontoitem-common.json]
+[16:48:29] [main/INFO] (cpw.mods.modlauncher.Launcher) ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[16:48:30] [main/DEBUG] (cpw.mods.modlauncher.LaunchServiceHandler) Found launch services [fmlclientdev,forgeclient,minecraft,forgegametestserverdev,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness,forgegametestserveruserdev]
+[16:48:30] [main/DEBUG] (cpw.mods.modlauncher.NameMappingServiceHandler) Found naming services : [srgtoyarn]
+[16:48:30] [main/DEBUG] (cpw.mods.modlauncher.LaunchPluginHandler) Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,unprotect,capability_token_subclass,accesstransformer,runtimedistcleaner]
+[16:48:30] [main/DEBUG] (cpw.mods.modlauncher.TransformationServicesHandler) Discovering transformation services
+[16:48:30] [main/DEBUG] (net.minecraftforge.fml.loading.FMLPaths) Path GAMEDIR is C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run
+[16:48:30] [main/DEBUG] (net.minecraftforge.fml.loading.FMLPaths) Path MODSDIR is C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\mods
+[16:48:30] [main/DEBUG] (net.minecraftforge.fml.loading.FMLPaths) Path CONFIGDIR is C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\config
+[16:48:30] [main/DEBUG] (net.minecraftforge.fml.loading.FMLPaths) Path FMLCONFIG is C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\config\fml.toml
+[16:48:30] [main/WARN] (net.minecraftforge.fml.loading.FMLConfig) Configuration file C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\config\fml.toml is not correct. Correcting
+[16:48:30] [main/INFO] (net.minecraftforge.fml.loading.FMLConfig) Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
+[16:48:30] [main/INFO] (net.minecraftforge.fml.loading.FMLConfig) Incorrect key [earlyWindowSquir] was corrected from null to false
+[16:48:30] [main/DEBUG] (cpw.mods.modlauncher.TransformationServicesHandler) Found additional transformation services from discovery services: 
+[16:48:30] [main/INFO] (net.minecraftforge.fml.loading.ImmediateWindowHandler) Loading ImmediateWindowProvider fmlearlywindow
+[16:48:30] [main/INFO] (EARLYDISPLAY) Trying GL version 4.6
+[16:48:31] [main/INFO] (EARLYDISPLAY) Requested GL version 4.6 got version 4.6
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServicesHandler) Found transformer services : [mixin,ForgeLoomMixinRemapperInjector,fml]
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServicesHandler) Transformation services loading
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Loading service mixin
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Loaded service mixin
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Loading service ForgeLoomMixinRemapperInjector
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Loaded service ForgeLoomMixinRemapperInjector
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Loading service fml
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.LauncherVersion) Found FMLLauncher version 1.0
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) FML 1.0 loading
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) FML found ModLauncher version : 10.0.9+10.0.9+main.dcd20f30
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) FML found EventBus version : 6.0.5+6.0.5+master.eb8e549b
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) Found Runtime Dist Cleaner
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) FML found CoreMod version : 5.0.1+15+master.dc5a2922
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) Found ForgeSPI package implementation version 7.0.1+7.0.1+master.d2b38bf6
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) Found ForgeSPI package specification 5
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Loaded service fml
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServicesHandler) Configuring option handling for services
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServicesHandler) Transformation services initializing
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Initializing transformation service mixin
+[16:48:31] [main/DEBUG] (mixin) MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@65accb85
+[16:48:31] [main/INFO] (mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/sathi/.gradle/caches/modules-2/files-2.1/dev.architectury/mixin-patched/0.8.5.10/a8cf27a2274cbb5030707cf66df222a766435a4/mixin-patched-0.8.5.10.jar%23140!/ Service=ModLauncher Env=CLIENT
+[16:48:31] [pool-5-thread-1/INFO] (EARLYDISPLAY) GL info: AMD Radeon(TM) Graphics GL version 4.6.0 Core Profile Context 22.20.14.220712, ATI Technologies Inc.
+[16:48:31] [main/DEBUG] (mixin) Initialising Mixin Platform Manager
+[16:48:31] [main/DEBUG] (mixin) Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[16:48:31] [main/DEBUG] (mixin) Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[16:48:31] [main/DEBUG] (mixin) MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[16:48:31] [main/DEBUG] (mixin) Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[16:48:31] [main/DEBUG] (mixin) MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Initialized transformation service mixin
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Initializing transformation service ForgeLoomMixinRemapperInjector
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Initialized transformation service ForgeLoomMixinRemapperInjector
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Initializing transformation service fml
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLServiceProvider) Setting up basic FML game directories
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLPaths) Path GAMEDIR is C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLPaths) Path MODSDIR is C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\mods
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLPaths) Path CONFIGDIR is C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\config
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLPaths) Path FMLCONFIG is C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\config\fml.toml
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLServiceProvider) Loading configuration
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLServiceProvider) Preparing ModFile
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLServiceProvider) Preparing launch handler
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) Using forgeclientuserdev as launch service
+[16:48:31] [main/DEBUG] (AXFORM) Set name handler Service NameHandler from mcp to srg
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) Received command line version data  : VersionInfo[forgeVersion=47.0.50, mcVersion=1.20.1, mcpVersion=20230612.114412, forgeGroup=net.minecraftforge]
+[16:48:31] [main/DEBUG] (net.minecraftforge.fml.loading.RuntimeDistCleaner) Configuring for Dist CLIENT
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Initialized transformation service fml
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.NameMappingServiceHandler) Current naming domain is 'mcp'
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.NameMappingServiceHandler) Identified name mapping providers {srg=srgtoyarn:1}
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServicesHandler) Transformation services begin scanning
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Beginning scan trigger - transformation service mixin
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) End scan trigger - transformation service mixin
+[16:48:31] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Beginning scan trigger - transformation service ForgeLoomMixinRemapperInjector
+[16:48:31] [main/DEBUG] (ForgeLoomRemapperInjector) We will be injecting our remapper.
+[16:48:32] [main/DEBUG] (ForgeLoomRemapperInjector) We have successfully injected our remapper.
+[16:48:32] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) End scan trigger - transformation service ForgeLoomMixinRemapperInjector
+[16:48:32] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) Beginning scan trigger - transformation service fml
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.FMLServiceProvider) Initiating mod scan
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.FMLLoader) Scanning for Mod Locators
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModListHandler) Found mod coordinates from lists: []
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null)
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found Dependency Locators : (JarInJar:null)
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Scanning for mods and other resources to load. We know 5 ways to find mods
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Trying locator {mods folder locator at C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\mods}
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModsFolderLocator) Scanning mods dir C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\mods for mods
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator {mods folder locator at C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\mods} found 0 candidates or errors
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator {mods folder locator at C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\mods} found 0 valid mod files
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Trying locator {Maven Directory locator for mods []}
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator {Maven Directory locator for mods []} found 0 candidates or errors
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator {Maven Directory locator for mods []} found 0 valid mod files
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Trying locator {ExplodedDir locator}
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator {ExplodedDir locator} found 0 candidates or errors
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator {ExplodedDir locator} found 0 valid mod files
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Trying locator net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.targets.CommonLaunchHandler) Got mod coordinates main%%C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\resources\main;main%%C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\classes\java\main;main%%C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\classes\kotlin\main from env
+[16:48:32] [main/DEBUG] (net.minecraftforge.fml.loading.targets.CommonLaunchHandler) Found supplied mod coordinates [{main=[C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\resources\main, C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\classes\java\main, C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\classes\kotlin\main]}]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file forge-1.20.1-47.0.50-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.9-v2-forge-1.20.1-47.0.50.jar with {minecraft} mods - versions {1.20.1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.0.50\c32815f62e65f2f13d80edeb018a1e392802a9e0\javafmllanguage-1.20.1-47.0.50.jar
+[16:48:33] [main/WARN] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Mod file C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.0.50\c32815f62e65f2f13d80edeb018a1e392802a9e0\javafmllanguage-1.20.1-47.0.50.jar is missing mods.toml file
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.0.50\44bc21bb50ce3def03d9572d7809d2d0cf852678\lowcodelanguage-1.20.1-47.0.50.jar
+[16:48:33] [main/WARN] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Mod file C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.0.50\44bc21bb50ce3def03d9572d7809d2d0cf852678\lowcodelanguage-1.20.1-47.0.50.jar is missing mods.toml file
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.0.50\a3ac0e8a41135cf93ace52056513872669da1e11\mclanguage-1.20.1-47.0.50.jar
+[16:48:33] [main/WARN] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Mod file C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.0.50\a3ac0e8a41135cf93ace52056513872669da1e11\mclanguage-1.20.1-47.0.50.jar is missing mods.toml file
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.0.50\74c664c5e6c27088f6ab22d579857e84d223d4b5\fmlcore-1.20.1-47.0.50.jar
+[16:48:33] [main/WARN] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Mod file C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.0.50\74c664c5e6c27088f6ab22d579857e84d223d4b5\fmlcore-1.20.1-47.0.50.jar is missing mods.toml file
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type null: [C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\resources\main, C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\classes\java\main, C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\classes\kotlin\main]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\resources\main
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file main with {pokemontoitem} mods - versions {0.0.2_BETA+1.20.1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type null: []
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate /
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file  with {forge} mods - versions {47.0.50}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386 found 7 candidates or errors
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386 found 7 valid mod files
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file javafmllanguage-1.20.1-47.0.50.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file lowcodelanguage-1.20.1-47.0.50.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file mclanguage-1.20.1-47.0.50.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file fmlcore-1.20.1-47.0.50.jar of type LIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file forge-1.20.1-47.0.50-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.9-v2-forge-1.20.1-47.0.50.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file main of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file  of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Trying locator net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type null: [C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\dev\architectury\architectury-forge\9.1.12\architectury-forge-9.1.12.jar]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\dev\architectury\architectury-forge\9.1.12\architectury-forge-9.1.12.jar
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file architectury-forge-9.1.12.jar with {architectury} mods - versions {9.1.12}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type null: [C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\curse\maven\cobblemon-687131\4797451\cobblemon-687131-4797451.jar]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\curse\maven\cobblemon-687131\4797451\cobblemon-687131-4797451.jar
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file cobblemon-687131-4797451.jar with {cobblemon} mods - versions {1.4.0+1.20.1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type null: [C:\Users\sathi\AppData\Local\Temp\10499212569090813497.jar]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\AppData\Local\Temp\10499212569090813497.jar
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file 10499212569090813497.jar with {generated_77fd4c6} mods - versions {1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/MANIFEST.MF mod of type LIBRARY: [C:\Users\sathi\.gradle\caches\modules-2\files-2.1\thedarkcolour\kotlinforforge\4.3.0\2c07994bc8821f1a7c9823d1c62b39ed528185b\kotlinforforge-4.3.0-all.jar]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type null: [C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\dev\architectury\architectury-forge\9.1.12\architectury-forge-9.1.12.jar]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\dev\architectury\architectury-forge\9.1.12\architectury-forge-9.1.12.jar
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file architectury-forge-9.1.12.jar with {architectury} mods - versions {9.1.12}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type null: [C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\curse\maven\cobblemon-687131\4797451\cobblemon-687131-4797451.jar]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\curse\maven\cobblemon-687131\4797451\cobblemon-687131-4797451.jar
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file cobblemon-687131-4797451.jar with {cobblemon} mods - versions {1.4.0+1.20.1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type null: [C:\Users\sathi\AppData\Local\Temp\10499212569090813497.jar]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\AppData\Local\Temp\10499212569090813497.jar
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file 10499212569090813497.jar with {generated_77fd4c6} mods - versions {1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1 found 12 candidates or errors
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1 found 5 invalid mod files
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Locator net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1 found 7 valid mod files
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file architectury-forge-9.1.12.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file cobblemon-687131-4797451.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file 10499212569090813497.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file kotlinforforge-4.3.0-all.jar of type LIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file architectury-forge-9.1.12.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file cobblemon-687131-4797451.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file 10499212569090813497.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.UniqueModListBuilder) Found 2 mods for first modid generated_77fd4c6, selecting most recent based on version data
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.UniqueModListBuilder) Selected file 10499212569090813497.jar for modid generated_77fd4c6 with version 1
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.UniqueModListBuilder) Found 2 mods for first modid architectury, selecting most recent based on version data
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.UniqueModListBuilder) Selected file architectury-forge-9.1.12.jar for modid architectury with version 9.1.12
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.UniqueModListBuilder) Found 2 mods for first modid cobblemon, selecting most recent based on version data
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.UniqueModListBuilder) Selected file cobblemon-687131-4797451.jar for modid cobblemon with version 1.4.0+1.20.1
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Successfully Loaded 11 mods. Attempting to load dependencies...
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Trying locator net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator@353990c8
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from forge-1.20.1-47.0.50-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.9-v2-forge-1.20.1-47.0.50.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from 10499212569090813497.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from , it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from architectury-forge-9.1.12.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from main, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from cobblemon-687131-4797451.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from mclanguage-1.20.1-47.0.50.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from javafmllanguage-1.20.1-47.0.50.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from fmlcore-1.20.1-47.0.50.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from lowcodelanguage-1.20.1-47.0.50.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/MANIFEST.MF mod of type LANGPROVIDER: []
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/MANIFEST.MF mod of type GAMELIBRARY: []
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type GAMELIBRARY: []
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate 
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file kffmod-4.3.0.jar with {kotlinforforge} mods - versions {4.3.0}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from kfflang-4.3.0.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from kfflib-4.3.0.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractJarFileDependencyLocator) Failed to load resource META-INF\jarjar\metadata.json from kffmod-4.3.0.jar, it does not contain dependency information.
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/mods.toml mod of type GAMELIBRARY: []
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate 
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file kffmod-4.3.0.jar with {kotlinforforge} mods - versions {4.3.0}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/MANIFEST.MF mod of type GAMELIBRARY: []
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.AbstractModProvider) Found META-INF/MANIFEST.MF mod of type LANGPROVIDER: []
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator) Found 3 dependencies adding them to mods collection
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file kfflang-4.3.0.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator@353990c8
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file kffmod-4.3.0.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator@353990c8
+[16:48:33] [main/INFO] (net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer) Found mod file kfflib-4.3.0.jar of type GAMELIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator@353990c8
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file forge-1.20.1-47.0.50-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.9-v2-forge-1.20.1-47.0.50.jar with {minecraft} mods - versions {1.20.1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Loading mod file C:\Users\sathi\.gradle\caches\fabric-loom\minecraftMaven\net\minecraft\forge-1.20.1-47.0.50-minecraft-merged\1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.9-v2-forge-1.20.1-47.0.50\forge-1.20.1-47.0.50-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.9-v2-forge-1.20.1-47.0.50.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\AppData\Local\Temp\10499212569090813497.jar
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file 10499212569090813497.jar with {generated_77fd4c6} mods - versions {1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Loading mod file C:\Users\sathi\AppData\Local\Temp\10499212569090813497.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[1,)]]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate 
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file kffmod-4.3.0.jar with {kotlinforforge} mods - versions {4.3.0}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Loading mod file  with languages [LanguageSpec[languageName=kotlinforforge, acceptedVersions=[4,)]]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate /
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file  with {forge} mods - versions {47.0.50}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Found coremod field_to_method with Javascript path coremods/field_to_method.js
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Found coremod method_redirector with Javascript path coremods/method_redirector.js
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Found coremod coremods/field_to_method.js
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Found coremod coremods/field_to_instanceof.js
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Found coremod coremods/add_bouncer_method.js
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Found coremod coremods/method_redirector.js
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\dev\architectury\architectury-forge\9.1.12\architectury-forge-9.1.12.jar
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file architectury-forge-9.1.12.jar with {architectury} mods - versions {9.1.12}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Loading mod file C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\dev\architectury\architectury-forge\9.1.12\architectury-forge-9.1.12.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[46,)]]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\resources\main
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file main with {pokemontoitem} mods - versions {0.0.2_BETA+1.20.1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Loading mod file C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\build\resources\main with languages [LanguageSpec[languageName=kotlinforforge, acceptedVersions=[3,)]]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileParser) Considering mod file candidate C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\curse\maven\cobblemon-687131\4797451\cobblemon-687131-4797451.jar
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFileInfo) Found valid mod file cobblemon-687131-4797451.jar with {cobblemon} mods - versions {1.4.0+1.20.1}
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Loading mod file C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2_forge_1_20_1_47_0_50_forge\curse\maven\cobblemon-687131\4797451\cobblemon-687131-4797451.jar with languages [LanguageSpec[languageName=kotlinforforge, acceptedVersions=[3,)]]
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModFile) Loading mod file  with languages []
+[16:48:33] [main/DEBUG] (net.minecraftforge.fml.loading.moddiscovery.ModValidator) Found 8 mod files with 7 mods
+[16:48:33] [main/DEBUG] (cpw.mods.modlauncher.TransformationServiceDecorator) End scan trigger - transformation service fml

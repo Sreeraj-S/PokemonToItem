@@ -1,0 +1,32 @@
+[16:48:29] [main/INFO] (Launcher) ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.20.1-5, --assetsDir, C:\Users\sathi\.gradle\caches\fabric-loom\assets, --gameDir, ., --fml.forgeVersion, 47.0.50, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, -mixin.config, mixins.pokemontoitem-forge.json, -mixin.config, mixins.pokemontoitem-common.json, --mixin.config, mixins.pokemontoitem-common.json]
+[16:48:29] [main/INFO] (Launcher) ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.9 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[16:48:30] [main/WARN] (FMLConfig) Configuration file C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\forge\run\config\fml.toml is not correct. Correcting
+[16:48:30] [main/INFO] (FMLConfig) Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
+[16:48:30] [main/INFO] (FMLConfig) Incorrect key [earlyWindowSquir] was corrected from null to false
+[16:48:30] [main/INFO] (ImmediateWindowHandler) Loading ImmediateWindowProvider fmlearlywindow
+[16:48:30] [main/INFO] (EARLYDISPLAY) Trying GL version 4.6
+[16:48:31] [main/INFO] (EARLYDISPLAY) Requested GL version 4.6 got version 4.6
+[16:48:31] [main/INFO] (mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/sathi/.gradle/caches/modules-2/files-2.1/dev.architectury/mixin-patched/0.8.5.10/a8cf27a2274cbb5030707cf66df222a766435a4/mixin-patched-0.8.5.10.jar%23140!/ Service=ModLauncher Env=CLIENT
+[16:48:31] [pool-5-thread-1/INFO] (EARLYDISPLAY) GL info: AMD Radeon(TM) Graphics GL version 4.6.0 Core Profile Context 22.20.14.220712, ATI Technologies Inc.
+[16:48:33] [main/WARN] (ModFileParser) Mod file C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.0.50\c32815f62e65f2f13d80edeb018a1e392802a9e0\javafmllanguage-1.20.1-47.0.50.jar is missing mods.toml file
+[16:48:33] [main/WARN] (ModFileParser) Mod file C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.0.50\44bc21bb50ce3def03d9572d7809d2d0cf852678\lowcodelanguage-1.20.1-47.0.50.jar is missing mods.toml file
+[16:48:33] [main/WARN] (ModFileParser) Mod file C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.0.50\a3ac0e8a41135cf93ace52056513872669da1e11\mclanguage-1.20.1-47.0.50.jar is missing mods.toml file
+[16:48:33] [main/WARN] (ModFileParser) Mod file C:\Users\sathi\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.0.50\74c664c5e6c27088f6ab22d579857e84d223d4b5\fmlcore-1.20.1-47.0.50.jar is missing mods.toml file
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file javafmllanguage-1.20.1-47.0.50.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file lowcodelanguage-1.20.1-47.0.50.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file mclanguage-1.20.1-47.0.50.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file fmlcore-1.20.1-47.0.50.jar of type LIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file forge-1.20.1-47.0.50-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.9-v2-forge-1.20.1-47.0.50.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file main of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file  of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3a00f386
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file architectury-forge-9.1.12.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file cobblemon-687131-4797451.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file 10499212569090813497.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file kotlinforforge-4.3.0-all.jar of type LIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file architectury-forge-9.1.12.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file cobblemon-687131-4797451.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file 10499212569090813497.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@5dc1c1c1
+[16:48:33] [main/INFO] (JarInJarDependencyLocator) Found 3 dependencies adding them to mods collection
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file kfflang-4.3.0.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator@353990c8
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file kffmod-4.3.0.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator@353990c8
+[16:48:33] [main/INFO] (ModDiscoverer) Found mod file kfflib-4.3.0.jar of type GAMELIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator@353990c8

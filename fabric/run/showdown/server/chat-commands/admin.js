@@ -666,8 +666,10 @@ ${buf}`);
         for (const key of newKeys) {
           if (!oldProto[key]) {
             counts.added++;
-          } else if (// compare source code
-          typeof oldProto[key] !== "function" || oldProto[key].toString() !== newProto[key].toString()) {
+          } else if (
+            // compare source code
+            typeof oldProto[key] !== "function" || oldProto[key].toString() !== newProto[key].toString()
+          ) {
             counts.updated++;
           }
           oldProto[key] = newProto[key];

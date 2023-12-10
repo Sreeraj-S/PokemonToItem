@@ -539,7 +539,8 @@ class RandomGen4Teams extends import_random_teams.default {
           );
         };
         const moveIsRejectable = !move.weather && !move.damage && (move.category !== "Status" || !move.flags.heal) && (move.category === "Status" || !types.has(move.type) || move.basePower && move.basePower < 40 && !move.multihit) && // These moves cannot be rejected in favor of a forced move
-        !["judgment", "lightscreen", "reflect", "sleeptalk"].includes(moveid) && (counter.get("physicalsetup") + counter.get("specialsetup") < 2 && (!counter.setupType || counter.setupType === "Mixed" || move.category !== counter.setupType && move.category !== "Status" || counter.get(counter.setupType) + counter.get("Status") > 3));
+        !["judgment", "lightscreen", "reflect", "sleeptalk"].includes(moveid) && // Setup-supported moves should only be rejected under specific circumstances
+        (counter.get("physicalsetup") + counter.get("specialsetup") < 2 && (!counter.setupType || counter.setupType === "Mixed" || move.category !== counter.setupType && move.category !== "Status" || counter.get(counter.setupType) + counter.get("Status") > 3));
         if (!cull && !isSetup && moveIsRejectable) {
           const canRollForcedMoves = (
             // These moves should always be rolled

@@ -18,7 +18,6 @@ import org.apache.logging.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 
-
 import static net.minecraft.server.command.CommandManager.literal;
 
 public class ItemToPoke {

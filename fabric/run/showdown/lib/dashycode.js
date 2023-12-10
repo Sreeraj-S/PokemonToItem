@@ -131,7 +131,9 @@ function encode(str, allowCaps = false) {
     alphaIndex = 0;
     if (isSafe && curCharCode === 32) {
       const nextCharCode = str.charCodeAt(i + 1);
-      if (97 <= nextCharCode && nextCharCode <= 122 || 65 <= nextCharCode && nextCharCode <= 90 || 48 <= nextCharCode && nextCharCode <= 57) {
+      if (97 <= nextCharCode && nextCharCode <= 122 || // a-z
+      65 <= nextCharCode && nextCharCode <= 90 || // A-Z
+      48 <= nextCharCode && nextCharCode <= 57) {
         safePart += "-";
         streamWrite(unsafeStream, 2, 0);
         continue;

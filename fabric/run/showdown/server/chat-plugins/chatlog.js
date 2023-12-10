@@ -99,7 +99,9 @@ const LogReader = new class {
     let atLeastOne = false;
     for (const roomid of list) {
       const room = Rooms.get(roomid);
-      const forceShow = room && (room.auth.has(user.id) && user.can("mute", null, room) || isStaff && user.inRooms.has(room.roomid));
+      const forceShow = room && // you are authed in the room
+      (room.auth.has(user.id) && user.can("mute", null, room) || // you are staff and currently in the room
+      isStaff && user.inRooms.has(room.roomid));
       if (!isUpperStaff && !forceShow) {
         if (!isStaff)
           continue;

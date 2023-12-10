@@ -5,7 +5,7 @@ issueTrackerURL="https://github.com/Sreeraj-S/PokemonToItem/issues"
 
 [[mods]] #mandatory
 modId="pokemontoitem" #mandatory
-version="0.0.1_BETA+1.19.2" #mandatory
+version="0.0.2_BETA+1.20.1" #mandatory
 displayName="Pokemon To Item" #mandatory
 displayURL="https://github.com/Sreeraj-S"
 #logoFile="examplemod.png" #optional
@@ -23,12 +23,12 @@ description='''
 [[dependencies.pokemontoitem]]
 modId="minecraft"
 mandatory=true
-versionRange="[1.19.2]"
+versionRange="[1.20.1,)"
 
 [[dependencies.pokemontoitem]]
 modId="forge" #mandatory
 mandatory=true #mandatory
-versionRange="[40,)" #mandatory
+versionRange="[45,)" #mandatory
 
 [[dependencies.pokemontoitem]]
 modId="architectury"

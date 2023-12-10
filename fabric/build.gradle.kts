@@ -40,20 +40,21 @@ dependencies {
         isTransitive = false
     }
 
-    modImplementation ("curse.maven:cobblemon-687131:4468330") {
-        isTransitive = false;
+    modImplementation ("curse.maven:cobblemon-687131:4797468") {
+        isTransitive = false
     }
 
+    modApi(libs.fabricLoader)
     modApi(libs.fabricApi)
     modApi(libs.fabricKotlin)
     modApi(libs.architecturyFabric)
     modApi(libs.fabricPermissionsApi)
     listOf(
-        libs.stdlib,
-        libs.reflect,
-        libs.jetbrainsAnnotations,
-        libs.serializationCore,
-        libs.serializationJson,
+            libs.stdlib,
+            libs.reflect,
+            libs.jetbrainsAnnotations,
+            libs.serializationCore,
+            libs.serializationJson,
     ).forEach {
         bundle(it)
         runtimeOnly(it)

@@ -1,0 +1,23 @@
+{
+  "uuid": "11e8c009-da15-3a5d-81f0-ba0017af511c",
+  "starterPrompted": true,
+  "starterLocked": false,
+  "starterSelected": true,
+  "starterUUID": "9a74803e-5c9f-4606-bd84-90fc699994b9",
+  "keyItems": [],
+  "extraData": {},
+  "advancementData": {
+    "totalCaptureCount": 0,
+    "totalEggsHatched": 0,
+    "totalEvolvedCount": 0,
+    "totalBattleVictoryCount": 0,
+    "totalPvPBattleVictoryCount": 0,
+    "totalPvWBattleVictoryCount": 0,
+    "totalPvNBattleVictoryCount": 0,
+    "totalShinyCaptureCount": 0,
+    "totalTradedCount": 0,
+    "totalTypeCaptureCounts": {},
+    "totalDefeatedCounts": {},
+    "aspectsCollected": {}
+  }
+}

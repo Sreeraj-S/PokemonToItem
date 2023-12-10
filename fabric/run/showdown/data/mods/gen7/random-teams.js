@@ -303,7 +303,8 @@ class RandomGen7Teams extends import_random_teams.RandomGen8Teams {
       case "facade":
         return { cull: moves.has("bulkup") || hasRestTalk };
       case "hiddenpower":
-        return { cull: moves.has("rest") || !counter.get("stab") && counter.damagingMoves.size < 2 || counter.setupType === "Special" && types.has("Fairy") && movePool.includes("moonblast") };
+        return { cull: moves.has("rest") || !counter.get("stab") && counter.damagingMoves.size < 2 || // Force Moonblast on Special-setup Fairies
+        counter.setupType === "Special" && types.has("Fairy") && movePool.includes("moonblast") };
       case "hypervoice":
         return { cull: moves.has("blizzard") };
       case "judgment":

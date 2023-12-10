@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Cobblemon Contributors
+ * Copyright (C) 2023 Cobblemon Contributors
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -7,13 +7,13 @@
  */
 
 // eslint-disable-next-line strict
-
-const BS = require("./sim/battle-stream");
-const Dex = require("./sim/dex").Dex;
-const CobblemonCache = require("./sim/cobblemon-cache");
+const BS = require('./sim/battle-stream');
+const Dex = require('./sim/dex').Dex;
 
 const battleMap = new Map();
-const cobbledModId = "cobblemon";
+const cobbledModId = 'cobblemon';
+const CobblemonCache = require("./sim/cobblemon-cache");
+const BagItems = require("./sim/bag-items");
 
 function startBattle(graalShowdown, battleId, requestMessages) {
 	const battleStream = new BS.BattleStream();
@@ -48,19 +48,11 @@ function getCobbledMoves() {
 }
 
 function getCobbledAbilityIds() {
-	return JSON.stringify(
-		Dex.mod(cobbledModId)
-			.abilities.all()
-			.map((ability) => ability.id)
-	);
+	return JSON.stringify(Dex.mod(cobbledModId).abilities.all().map(ability => ability.id));
 }
 
 function getCobbledItemIds() {
-	return JSON.stringify(
-		Dex.mod(cobbledModId)
-			.items.all()
-			.map((item) => item.id)
-	);
+	return JSON.stringify(Dex.mod(cobbledModId).items.all().map(item => item.id));
 }
 
 function receiveSpeciesData(speciesArray) {
@@ -69,4 +61,13 @@ function receiveSpeciesData(speciesArray) {
 		const speciesData = JSON.parse(speciesJson);
 		CobblemonCache.registerSpecies(speciesData);
 	});
+}
+
+function afterCobbledSpeciesInit() {
+	Dex.modsLoaded = false;
+	Dex.includeMods();
+}
+
+function receiveBagItemData(itemId, bagItem) {
+	BagItems.set(itemId, eval(`(${bagItem})`));
 }

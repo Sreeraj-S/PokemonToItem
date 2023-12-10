@@ -4,11 +4,7 @@ package me.sreeraj.pokemontoitem.screen;
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.storage.party.PlayerPartyStore;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.google.gson.JsonObject;
-import com.oracle.truffle.js.runtime.builtins.JSON;
 import me.sreeraj.pokemontoitem.commands.PokeToItem;
-
-
 import me.sreeraj.pokemontoitem.util.PokemonUtility;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -16,8 +12,6 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-
-
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtIo;
 import net.minecraft.network.packet.s2c.play.ScreenHandlerSlotUpdateS2CPacket;
@@ -27,10 +21,7 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.screen.slot.SlotActionType;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
@@ -115,7 +106,7 @@ public class PokeToItemHandlerFactory implements NamedScreenHandlerFactory {
                 }
             }
             @Override
-            public ItemStack transferSlot(PlayerEntity player, int index) {
+            public ItemStack quickMove(PlayerEntity player, int index) {
                 return null;
             }
 

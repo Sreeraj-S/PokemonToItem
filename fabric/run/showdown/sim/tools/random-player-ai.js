@@ -79,8 +79,10 @@ class RandomPlayerAI extends import_battle_stream.BattlePlayer {
         const change = (canMegaEvo || canUltraBurst || canDynamax) && this.prng.next() < this.mega;
         const useMaxMoves = !active.canDynamax && active.maxMoves || change && canDynamax;
         const possibleMoves = useMaxMoves ? active.maxMoves.maxMoves : active.moves;
-        let canMove = range(1, possibleMoves.length).filter((j) => // not disabled
-        !possibleMoves[j - 1].disabled).map((j) => ({
+        let canMove = range(1, possibleMoves.length).filter((j) => (
+          // not disabled
+          !possibleMoves[j - 1].disabled
+        )).map((j) => ({
           slot: j,
           move: possibleMoves[j - 1].move,
           target: possibleMoves[j - 1].target,

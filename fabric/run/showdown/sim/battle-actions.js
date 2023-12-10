@@ -1598,10 +1598,11 @@ class BattleActions {
   // ==================================================================
   canMegaEvo(pokemon) {
     const species = pokemon.baseSpecies;
-    const altForme = species.otherFormes && this.dex.species.get(species.otherFormes[0]);
     const item = pokemon.getItem();
-    if ((this.battle.gen <= 7 || this.battle.ruleTable.has("+pokemontag:past")) && altForme?.isMega && altForme?.requiredMove && pokemon.baseMoves.includes((0, import_dex.toID)(altForme.requiredMove)) && !item.zMove) {
-      return altForme.name;
+    const megaKey = species.otherFormes?.find((form) => /.*-Mega(-[a-zA-Z])?/.test(form));
+    const megaForme = megaKey && this.dex.species.get(megaKey);
+    if ((this.battle.gen <= 7 || this.battle.ruleTable.has("+pokemontag:past")) && megaForme?.requiredMove && pokemon.baseMoves.includes((0, import_dex.toID)(megaForme.requiredMove)) && !item.zMove) {
+      return megaForme.name;
     }
     if (item.megaEvolves === species.baseSpecies && item.megaStone !== species.name) {
       return item.megaStone;

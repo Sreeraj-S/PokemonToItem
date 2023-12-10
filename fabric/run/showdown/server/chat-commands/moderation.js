@@ -2215,8 +2215,10 @@ For future groupchat misuse, lock the creator, it will take away their trusted s
       return this.errorReply("Usage: /blacklistname name1, name2, ... | reason");
     }
     const targets = targetStr.split(",").map((s) => toID(s));
-    const duplicates = targets.filter((userid) => // can be asserted, room should always exist
-    Punishments.roomUserids.nestedGetByType(room.roomid, userid, "BLACKLIST"));
+    const duplicates = targets.filter((userid) => (
+      // can be asserted, room should always exist
+      Punishments.roomUserids.nestedGetByType(room.roomid, userid, "BLACKLIST")
+    ));
     if (duplicates.length) {
       return this.errorReply(`[${duplicates.join(", ")}] ${Chat.plural(duplicates, "are", "is")} already blacklisted.`);
     }

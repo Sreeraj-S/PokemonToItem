@@ -244,7 +244,11 @@ class Pokemon {
     this.baseMaxhp = 0;
     this.hp = 0;
     this.clearVolatile();
-    this.hp = this.set.currentHealth || this.maxhp;
+    if (this.set.currentHealth == 0 || this.set.currentHealth) {
+      this.hp = this.set.currentHealth;
+    } else {
+      this.hp = this.maxhp;
+    }
     if (!!this.set.status) {
       let status = this.battle.dex.conditions.get(this.set.status);
       this.status = status.id;
@@ -254,6 +258,10 @@ class Pokemon {
         this.statusState.startTime = this.set.statusDuration;
         this.statusState.time = this.set.statusDuration;
       }
+    }
+    if (this.hp == 0) {
+      this.status = "fnt";
+      this.fainted = true;
     }
   }
   toJSON() {
@@ -550,7 +558,8 @@ class Pokemon {
     return false;
   }
   ignoringItem() {
-    return !!(this.itemState.knockedOff || this.battle.gen >= 5 && !this.isActive || !this.getItem().ignoreKlutz && this.hasAbility("klutz") || this.volatiles["embargo"] || this.battle.field.pseudoWeather["magicroom"]);
+    return !!(this.itemState.knockedOff || // Gen 3-4
+    this.battle.gen >= 5 && !this.isActive || !this.getItem().ignoreKlutz && this.hasAbility("klutz") || this.volatiles["embargo"] || this.battle.field.pseudoWeather["magicroom"]);
   }
   deductPP(move, amount, target) {
     const gen = this.battle.gen;
@@ -1294,6 +1303,9 @@ class Pokemon {
       return false;
     }
     return true;
+  }
+  updatePP() {
+    this.battle.add("pp_update", `${this.side.id}: ${this.uuid}`, this.moveSlots.map((move) => `${move.id}: ${move.pp}`).join(", "));
   }
   /**
    * Unlike cureStatus, does not give cure message

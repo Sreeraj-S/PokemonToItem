@@ -871,7 +871,10 @@ class RandomGen8Teams {
             counter.add("stab");
             categories[move.category] += 0.1;
           }
-        } else if (moveType === "Normal" && ["Aerilate", "Galvanize", "Pixilate", "Refrigerate"].some((abil) => abilities.has(abil)) || move.priority === 0 && (abilities.has("Libero") || abilities.has("Protean")) && !this.noStab.includes(moveid) || moveType === "Steel" && abilities.has("Steelworker")) {
+        } else if (
+          // Less obvious forms of STAB
+          moveType === "Normal" && ["Aerilate", "Galvanize", "Pixilate", "Refrigerate"].some((abil) => abilities.has(abil)) || move.priority === 0 && (abilities.has("Libero") || abilities.has("Protean")) && !this.noStab.includes(moveid) || moveType === "Steel" && abilities.has("Steelworker")
+        ) {
           counter.add("stab");
         }
         if (move.flags["bite"])
@@ -1156,7 +1159,10 @@ class RandomGen8Teams {
       case "leafstorm":
         const leafBladePossible = movePool.includes("leafblade") || moves.has("leafblade");
         return {
-          cull: counter.setupType === "Physical" && (species.id === "virizion" || leafBladePossible) || moves.has("gigadrain") && !!counter.get("Status") || isDoubles && moves.has("energyball")
+          cull: (
+            // Virizion should always prefer Leaf Blade to Leaf Storm on Physical sets
+            counter.setupType === "Physical" && (species.id === "virizion" || leafBladePossible) || moves.has("gigadrain") && !!counter.get("Status") || isDoubles && moves.has("energyball")
+          )
         };
       case "powerwhip":
         return { cull: moves.has("leechlife") };
@@ -1233,7 +1239,8 @@ class RandomGen8Teams {
         return { cull: moves.has("knockoff") };
       case "shadowball":
         return {
-          cull: isDoubles && moves.has("phantomforce") || abilities.has("Pixilate") && (!!counter.setupType || counter.get("Status") > 1) || !types.has("Ghost") && movePool.includes("focusblast")
+          cull: isDoubles && moves.has("phantomforce") || // Special case for Sylveon, which never wants Shadow Ball as its only coverage move
+          abilities.has("Pixilate") && (!!counter.setupType || counter.get("Status") > 1) || !types.has("Ghost") && movePool.includes("focusblast")
         };
       case "shadowclaw":
         return { cull: types.has("Steel") && moves.has("shadowsneak") && counter.get("Physical") < 4 };
@@ -1246,7 +1253,10 @@ class RandomGen8Teams {
         return { cull: pulseIncompatible && !shiftryCase && counter.setupType !== "Special" };
       case "suckerpunch":
         return {
-          cull: isNoDynamax && species.id === "shiftry" && moves.has("defog") || moves.has("rest") || counter.damagingMoves.size < 2 || counter.setupType === "Special" || counter.get("Dark") > 1 && !types.has("Dark")
+          cull: (
+            // Shiftry in No Dynamax would otherwise get Choice Scarf Sucker Punch sometimes.
+            isNoDynamax && species.id === "shiftry" && moves.has("defog") || moves.has("rest") || counter.damagingMoves.size < 2 || counter.setupType === "Special" || counter.get("Dark") > 1 && !types.has("Dark")
+          )
         };
       case "dazzlinggleam":
         return { cull: ["fleurcannon", "moonblast", "petaldance"].some((m) => moves.has(m)) };
@@ -1267,7 +1277,9 @@ class RandomGen8Teams {
         return { cull: moves.has("rest") || moves.has("wish") || move.id === "synthesis" && moves.has("gigadrain") };
       case "roost":
         return {
-          cull: moves.has("throatchop") || moves.has("stoneedge") && species.id === "hawlucha" || moves.has("dualwingbeat") && (moves.has("outrage") || species.id === "scizor")
+          cull: moves.has("throatchop") || // Hawlucha doesn't want Roost + 3 attacks
+          moves.has("stoneedge") && species.id === "hawlucha" || // Special cases for Salamence, Dynaless Dragonite, and Scizor to help prevent sets with poor coverage or no setup.
+          moves.has("dualwingbeat") && (moves.has("outrage") || species.id === "scizor")
         };
       case "reflect":
       case "lightscreen":
@@ -1448,7 +1460,8 @@ class RandomGen8Teams {
       case "Tinted Lens":
         return (
           // For Sigilyph
-          moves.has("defog") || moves.has("hurricane") && abilities.has("Compound Eyes") || counter.get("Status") > 2 && !counter.setupType
+          moves.has("defog") || // For Butterfree
+          moves.has("hurricane") && abilities.has("Compound Eyes") || counter.get("Status") > 2 && !counter.setupType
         );
       case "Torrent":
         return moves.has("focusenergy") || moves.has("hypervoice");
@@ -1620,7 +1633,10 @@ class RandomGen8Teams {
     const defensiveStatTotal = species.baseStats.hp + species.baseStats.def + species.baseStats.spd;
     if (isLead && !isDoubles && !["Disguise", "Sturdy"].includes(ability) && !moves.has("substitute") && !counter.get("drain") && !counter.get("recoil") && !counter.get("recovery") && (defensiveStatTotal <= 250 && counter.get("hazards") || defensiveStatTotal <= 210))
       return "Focus Sash";
-    if (moves.has("clangoroussoul") || moves.has("boomburst") && Array.from(moves).some((m) => import_dex.Dex.moves.get(m).boosts?.spe))
+    if (moves.has("clangoroussoul") || // We manually check for speed-boosting moves, rather than using `counter.get('speedsetup')`,
+    // because we want to check for ANY speed boosting move.
+    // In particular, Shift Gear + Boomburst Toxtricity should get Throat Spray.
+    moves.has("boomburst") && Array.from(moves).some((m) => import_dex.Dex.moves.get(m).boosts?.spe))
       return "Throat Spray";
     const rockWeaknessCase = this.dex.getEffectiveness("Rock", species) >= 1 && (!teamDetails.defog || ability === "Intimidate" || moves.has("uturn") || moves.has("voltswitch"));
     const spinnerCase = moves.has("rapidspin") && (ability === "Regenerator" || !!counter.get("recovery"));
@@ -1628,7 +1644,8 @@ class RandomGen8Teams {
       return "Heavy-Duty Boots";
     if (!isDoubles && this.dex.getEffectiveness("Ground", species) >= 2 && !types.has("Poison") && ability !== "Levitate" && !abilities.has("Iron Barbs"))
       return "Air Balloon";
-    if (!isDoubles && counter.damagingMoves.size >= 3 && !counter.get("damage") && ability !== "Sturdy" && (species.baseStats.spe >= 90 || !moves.has("voltswitch")) && ["foulplay", "rapidspin", "substitute", "uturn"].every((m) => !moves.has(m)) && (counter.get("speedsetup") || counter.get("drain") && (!isNoDynamax || species.id !== "buzzwole" || moves.has("roost")) || moves.has("trickroom") || moves.has("psystrike") || species.baseStats.spe > 40 && defensiveStatTotal < 275))
+    if (!isDoubles && counter.damagingMoves.size >= 3 && !counter.get("damage") && ability !== "Sturdy" && (species.baseStats.spe >= 90 || !moves.has("voltswitch")) && ["foulplay", "rapidspin", "substitute", "uturn"].every((m) => !moves.has(m)) && (counter.get("speedsetup") || // No Dynamax Buzzwole doesn't want Life Orb with Bulk Up + 3 attacks
+    counter.get("drain") && (!isNoDynamax || species.id !== "buzzwole" || moves.has("roost")) || moves.has("trickroom") || moves.has("psystrike") || species.baseStats.spe > 40 && defensiveStatTotal < 275))
       return "Life Orb";
     if (!isDoubles && counter.damagingMoves.size >= 4 && !counter.get("Dragon") && !counter.get("Normal")) {
       return "Expert Belt";
@@ -1815,7 +1832,13 @@ class RandomGen8Teams {
         const moveIsRejectable = !(species.id === "genesectdouse" && move.id === "technoblast") && !(species.id === "togekiss" && move.id === "nastyplot") && !(species.id === "shuckle" && ["stealthrock", "stickyweb"].includes(move.id)) && (move.category === "Status" || !types.has(move.type) && move.id !== "judgment" || isLowBP && !move.multihit && !abilities.has("Technician"));
         const notImportantSetup = !counter.setupType || counter.setupType === "Mixed" || counter.get(counter.setupType) + counter.get("Status") > 3 && !counter.get("hazards") || move.category !== counter.setupType && move.category !== "Status";
         if (moveIsRejectable && (!cull && !isSetup && !move.weather && !move.stallingMove && notImportantSetup && !move.damage && (isDoubles ? this.unrejectableMovesInDoubles(move) : this.unrejectableMovesInSingles(move)))) {
-          if (!counter.get("stab") && counter.get("physicalpool") + counter.get("specialpool") > 0 && move.id !== "stickyweb" || moves.has("swordsdance") && species.id === "mew" && runEnforcementChecker("Flying") || abilities.has("Steelworker") && runEnforcementChecker("Steel") || !isDoubles && runEnforcementChecker("recovery") && move.id !== "stickyweb" || runEnforcementChecker("screens") || runEnforcementChecker("misc") || (isLead || species.id === "shuckle") && runEnforcementChecker("lead") || moves.has("leechseed") && runEnforcementChecker("leechseed")) {
+          if (
+            // Pokemon should have at least one STAB move
+            !counter.get("stab") && counter.get("physicalpool") + counter.get("specialpool") > 0 && move.id !== "stickyweb" || // Swords Dance Mew should have Brave Bird
+            moves.has("swordsdance") && species.id === "mew" && runEnforcementChecker("Flying") || // Dhelmise should have Anchor Shot
+            abilities.has("Steelworker") && runEnforcementChecker("Steel") || // Check for miscellaneous important moves
+            !isDoubles && runEnforcementChecker("recovery") && move.id !== "stickyweb" || runEnforcementChecker("screens") || runEnforcementChecker("misc") || (isLead || species.id === "shuckle") && runEnforcementChecker("lead") || moves.has("leechseed") && runEnforcementChecker("leechseed")
+          ) {
             cull = true;
           } else if (move.id !== "stickyweb" && !(species.id === "azumarill" && move.id === "aquajet")) {
             for (const type of types) {

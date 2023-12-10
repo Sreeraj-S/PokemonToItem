@@ -2,7 +2,8 @@ package me.sreeraj.pokemontoitem
 
 import com.mojang.brigadier.CommandDispatcher
 import dev.architectury.event.events.common.CommandRegistrationEvent
-import me.sreeraj.pokemontoitem.commands.*
+import me.sreeraj.pokemontoitem.commands.ItemToPoke
+import me.sreeraj.pokemontoitem.commands.PokeToItem
 import me.sreeraj.pokemontoitem.config.PokemonToItemConfig
 import me.sreeraj.pokemontoitem.permissions.PokemonToItemPermissions
 import net.minecraft.command.CommandRegistryAccess

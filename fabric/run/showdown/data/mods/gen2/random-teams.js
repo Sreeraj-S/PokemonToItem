@@ -195,7 +195,12 @@ class RandomGen2Teams extends import_random_teams.default {
         const moveIsRejectable = (move.category !== "Status" || !move.flags.heal) && // These moves cannot be rejected in favor of a forced move
         !["batonpass", "sleeptalk", "spikes", "sunnyday"].includes(move.id) && (move.category === "Status" || !types.has(move.type) || move.basePower && move.basePower < 40);
         if (!cull && !isSetup && moveIsRejectable && (counter.setupType || !move.stallingMove)) {
-          if (!counter.get("stab") && !counter.get("damage") && !types.has("Ghost") && counter.get("physicalpool") + counter.get("specialpool") > 0 || (movePool.includes("megahorn") || movePool.includes("softboiled") && moves.has("present")) || (moves.has("rest") && movePool.includes("sleeptalk") || moves.has("sleeptalk") && movePool.includes("rest")) || (moves.has("sunnyday") && movePool.includes("solarbeam") || moves.has("solarbeam") && movePool.includes("sunnyday")) || ["milkdrink", "recover", "spore"].some((m) => movePool.includes(m))) {
+          if (
+            // Pokemon should usually have at least one STAB move
+            !counter.get("stab") && !counter.get("damage") && !types.has("Ghost") && counter.get("physicalpool") + counter.get("specialpool") > 0 || (movePool.includes("megahorn") || movePool.includes("softboiled") && moves.has("present")) || // Rest + Sleep Talk should be selected together
+            (moves.has("rest") && movePool.includes("sleeptalk") || moves.has("sleeptalk") && movePool.includes("rest")) || // Sunny Day + Solar Beam should be selected together
+            (moves.has("sunnyday") && movePool.includes("solarbeam") || moves.has("solarbeam") && movePool.includes("sunnyday")) || ["milkdrink", "recover", "spore"].some((m) => movePool.includes(m))
+          ) {
             cull = true;
           } else {
             for (const type of types) {

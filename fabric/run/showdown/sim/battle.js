@@ -1,7 +1,9 @@
 "use strict";
+var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -15,6 +17,14 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var battle_exports = {};
 __export(battle_exports, {
@@ -33,6 +43,7 @@ var import_state = require("./state");
 var import_battle_queue = require("./battle-queue");
 var import_battle_actions = require("./battle-actions");
 var import_lib = require("../lib");
+var BagItems = __toESM(require("./bag-items"));
 /**
  * Simulator Battle
  * Pokemon Showdown - http://pokemonshowdown.com/
@@ -86,7 +97,7 @@ class Battle {
     }
     this.format = format;
     this.dex = import_dex.Dex.forFormat(format);
-    this.gen = this.dex.gen;
+    this.gen = options.format.gen || this.dex.gen;
     this.ruleTable = this.dex.formats.getRuleTable(format);
     this.trunc = this.dex.trunc;
     this.clampIntRange = import_lib.Utils.clampIntRange;
@@ -1013,6 +1024,15 @@ class Battle {
     }
     return null;
   }
+  getPokemonById(pokemonId) {
+    for (const side of this.sides) {
+      for (const pokemon of side.pokemon) {
+        if (pokemon.uuid === pokemonId) {
+          return pokemon;
+        }
+      }
+    }
+  }
   getAllPokemon() {
     const pokemonList = [];
     for (const side of this.sides) {
@@ -1413,11 +1433,15 @@ class Battle {
     if (this.gen <= 1) {
       const noProgressPossible = this.sides.every((side) => {
         const foeAllGhosts = side.foe.pokemon.every((pokemon) => pokemon.fainted || pokemon.hasType("Ghost"));
-        const foeAllTransform = side.foe.pokemon.every((pokemon) => pokemon.fainted || (this.dex.currentMod !== "gen1stadium" || pokemon.species.id !== "ditto") && // there are some subtleties such as a Mew with only Transform and auto-fail moves,
+        const foeAllTransform = side.foe.pokemon.every((pokemon) => pokemon.fainted || // true if transforming into this pokemon would lead to an endless battle
+        // Transform will fail (depleting PP) if used against Ditto in Stadium 1
+        (this.dex.currentMod !== "gen1stadium" || pokemon.species.id !== "ditto") && // there are some subtleties such as a Mew with only Transform and auto-fail moves,
         // but it's unlikely to come up in a real game so there's no need to handle it
         pokemon.moves.every((moveid) => moveid === "transform"));
         return side.pokemon.every((pokemon) => pokemon.fainted || // frozen pokemon can't thaw in gen 1 without outside help
-        pokemon.status === "frz" || pokemon.moves.every((moveid) => moveid === "transform") && foeAllTransform || pokemon.moveSlots.every((slot) => slot.pp === 0) && foeAllGhosts);
+        pokemon.status === "frz" || // a pokemon can't lose PP if it Transforms into a pokemon with only Transform
+        pokemon.moves.every((moveid) => moveid === "transform") && foeAllTransform || // Struggle can't damage yourself if every foe is a Ghost
+        pokemon.moveSlots.every((slot) => slot.pp === 0) && foeAllGhosts);
       });
       if (noProgressPossible) {
         this.add("-message", `This battle cannot progress. Endless Battle Clause activated!`);
@@ -1431,7 +1455,8 @@ class Battle {
       this.tie();
       return true;
     }
-    if (this.turn >= 500 && this.turn % 100 === 0 || this.turn >= 900 && this.turn % 10 === 0 || // every 10 turns past turn 900,
+    if (this.turn >= 500 && this.turn % 100 === 0 || // every 100 turns past turn 500,
+    this.turn >= 900 && this.turn % 10 === 0 || // every 10 turns past turn 900,
     this.turn >= 990) {
       const turnsLeft = 1e3 - this.turn;
       const turnsLeftText = turnsLeft === 1 ? `1 turn` : `${turnsLeft} turns`;
@@ -2073,7 +2098,7 @@ class Battle {
   updatePP() {
     for (const side of this.sides) {
       for (const pokemon of side.pokemon) {
-        this.add("pp_update", `${side.id}: ${pokemon.uuid}`, pokemon.moveSlots.map((move) => `${move.id}: ${move.pp}`).join(", "));
+        pokemon.updatePP();
       }
     }
   }
@@ -2561,6 +2586,46 @@ class Battle {
     this.go();
     if (this.log.length - this.sentLogPos > 500)
       this.sendUpdates();
+  }
+  splitFirst(str, delimiter, limit = 1) {
+    const splitStr = [];
+    while (splitStr.length < limit) {
+      const delimiterIndex = str.indexOf(delimiter);
+      if (delimiterIndex >= 0) {
+        splitStr.push(str.slice(0, delimiterIndex));
+        str = str.slice(delimiterIndex + delimiter.length);
+      } else {
+        splitStr.push(str);
+        str = "";
+      }
+    }
+    splitStr.push(str);
+    return splitStr;
+  }
+  useItem(message) {
+    if (message === void 0)
+      throw new Error(`No message offered for useItem`);
+    const [pokemonId, itemName, itemId, data] = this.splitFirst(message, " ", 4);
+    const messageStart = `${pokemonId} ${itemName} ${itemId}`;
+    var dataArray = message.substring(message.indexOf(messageStart) + messageStart.length).split(" ").filter((v) => v != "");
+    if (pokemonId === void 0)
+      throw new Error(`Pokemon ID required for useitem`);
+    if (itemName === void 0)
+      throw new Error("Item Name required for useitem");
+    if (itemId === void 0)
+      throw new Error("Item ID required for useitem");
+    if (!BagItems.has(itemId)) {
+      throw new Error("Invalid item: " + itemId);
+    }
+    const item = BagItems.getItem(itemId);
+    const pokemon = this.getPokemonById(pokemonId);
+    if (!pokemon)
+      throw new Error(`No pokemon found for ID ${pokemonId}`);
+    if (this.ended) {
+      return;
+    }
+    this.add("bagitem", pokemon.uuid, itemName, itemId);
+    item.use(this, pokemon, itemId, dataArray);
   }
   undoChoice(sideid) {
     const side = this.getSide(sideid);

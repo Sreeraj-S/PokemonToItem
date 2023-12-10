@@ -1434,8 +1434,10 @@ const commands = {
         "SELECT * FROM perspective_stats WHERE result = 0 AND timestamp > ? AND timestamp < ?",
         [timeNum, timeNum + 24 * 60 * 60 * 1e3]
       );
-      logs = logs.filter((log) => // proofing against node's stupid date lib
-      Chat.toTimestamp(new Date(log.timestamp)).split(" ")[0] === target);
+      logs = logs.filter((log) => (
+        // proofing against node's stupid date lib
+        Chat.toTimestamp(new Date(log.timestamp)).split(" ")[0] === target
+      ));
       if (!logs.length) {
         return this.errorReply(`No logs found for that date.`);
       }
