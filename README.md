@@ -1,7 +1,7 @@
 # PokemonToItem Mod
 **Cobblemon Addon - Pokémon Conversion and Itemization**
 
-This mod addon enhances the Cobblemon experience for Minecraft version 1.19.2, offering players the exciting ability to convert Pokémon into items and items back into Pokémon using intuitive in-game commands. Seamlessly compatible with both Forge and Fabric platforms, this addon opens up new gameplay possibilities.
+This mod addon enhances the Cobblemon experience for Minecraft version 1.20.1, offering players the exciting ability to convert Pokémon into items and items back into Pokémon using intuitive in-game commands. Seamlessly compatible with both Forge and Fabric platforms, this addon opens up new gameplay possibilities.
 
 ## Features
 
@@ -14,13 +14,13 @@ This mod addon enhances the Cobblemon experience for Minecraft version 1.19.2, o
 ## Installation
 
 **Forge:**
-1. Install Minecraft Forge for version 1.19.2.
+1. Install Minecraft Forge for version 1.20.1.
 2. Download both the Cobblemon Mod and this addon.
 3. Place the downloaded mods into the 'mods' folder within your Minecraft directory.
 4. Launch Minecraft to explore the newly added features.
 
 **Fabric:**
-1. Install Fabric Loader for Minecraft 1.19.2.
+1. Install Fabric Loader for Minecraft 1.20.1.
 2. Download both the Cobblemon Mod and this addon.
 3. Move the downloaded mods into the 'mods' directory in your Minecraft folder.
 4. Launch the game using the Fabric game launcher to experience the enhanced gameplay.
@@ -50,8 +50,8 @@ This mod addon enhances the Cobblemon experience for Minecraft version 1.19.2, o
 
 - Ensure you have downloaded the Cobblemon Mod along with this addon.
 - Downloads are available via GitHub releases:
-  - [GitHub Release for Forge](https://github.com/Sreeraj-S/PokemonToItem/releases/tag/0.0.1_BETA_Forge_1.19.2)
-  - [GitHub Release for Fabric](https://github.com/Sreeraj-S/PokemonToItem/releases/tag/0.0.1_BETA_Fabric_1.19.2)
+  - [GitHub Release for Forge](https://github.com/Sreeraj-S/PokemonToItem/releases/tag/0.0.2_BETA_Forge_1.20.1)
+  - [GitHub Release for Fabric](https://github.com/Sreeraj-S/PokemonToItem/releases/tag/0.0.2_BETA_Fabric_1.20.1)
 - If you have applied a datapack for alternate Pokémon textures, note that the item containing the Pokémon will inherit its appearance from the datapack.
 - As this is a beta release, anticipate and report bugs. If you find any issues, please create an issue on our GitHub repository.
 
