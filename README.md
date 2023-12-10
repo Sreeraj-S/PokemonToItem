@@ -1,7 +1,7 @@
 # PokemonToItem Mod
 **Cobblemon Addon - Pokémon Conversion and Itemization**
 
-This mod addon enhances the Cobblemon experience for Minecraft version 1.20.1, offering players the exciting ability to convert Pokémon into items and items back into Pokémon using intuitive in-game commands. Seamlessly compatible with both Forge and Fabric platforms, this addon opens up new gameplay possibilities.
+This mod addon enhances the Cobblemon experience for Minecraft version: 1.20.1, offering players the exciting ability to convert Pokémon into items and items back into Pokémon using intuitive in-game commands. Seamlessly compatible with both Forge and Fabric platforms, this addon opens up new gameplay possibilities.
 
 ## Features
 
