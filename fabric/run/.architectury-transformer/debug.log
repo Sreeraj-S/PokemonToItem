@@ -152,15 +152,15 @@
 [Architectury Transformer DEBUG]  - C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2\net\fabricmc\fabric-api\fabric-sound-api-v1\1.0.12+b3afc78b77\fabric-sound-api-v1-1.0.12+b3afc78b77.jar
 [Architectury Transformer DEBUG]  - C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2\net\fabricmc\fabric-api\fabric-transitive-access-wideners-v1\4.3.0+6c31357e77\fabric-transitive-access-wideners-v1-4.3.0+6c31357e77.jar
 [Architectury Transformer DEBUG]  - C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\.gradle\loom-cache\remapped_mods\net_fabricmc_yarn_1_20_1_1_20_1_build_9_v2\curse\maven\cobblemon-687131\4797468\cobblemon-687131-4797468.jar
-[Architectury Transformer] Read classpath in 2.678 s
+[Architectury Transformer] Read classpath in 2.680 s
 [Architectury Transformer DEBUG] Closed File Systems for C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\common\build\devlibs\common-dev.jar
-[Architectury Transformer DEBUG] Transforming 5 transformer(s) from C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\common\build\devlibs\common-dev.jar to C:\Users\sathi\AppData\Local\Temp\17843418181343005005.jar: 
+[Architectury Transformer DEBUG] Transforming 5 transformer(s) from C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\common\build\devlibs\common-dev.jar to C:\Users\sathi\AppData\Local\Temp\6811940874842653852.jar: 
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RuntimeMixinRefmapDetector@35a50a4c
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.GenerateFakeFabricMod@1f021e6c
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@103f852
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@587c290d
 [Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@4516af24
-[Architectury Transformer DEBUG] Transforming from C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\common\build\devlibs\common-dev.jar to C:\Users\sathi\AppData\Local\Temp\17843418181343005005.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer DEBUG] Transforming from C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\common\build\devlibs\common-dev.jar to C:\Users\sathi\AppData\Local\Temp\6811940874842653852.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/commands/ItemToPoke with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/commands/PokeToItem$Session with maxs=true frames=true
@@ -174,29 +174,21 @@
 [Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/util/PokemonUtility with maxs=true frames=true
 [Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/PokemonToItem with maxs=true frames=true
 [Architectury Transformer DEBUG] Checking whether /mixins.pokemontoitem-common.json is a mixin config.
-[Architectury Transformer DEBUG] Closed File Systems for C:\Users\sathi\AppData\Local\Temp\17843418181343005005.jar
+[Architectury Transformer DEBUG] Closed File Systems for C:\Users\sathi\AppData\Local\Temp\6811940874842653852.jar
 [Architectury Transformer] Listening at C:\Users\sathi\OneDrive\Documents\CWPlugins\test\PokemonToItem\common\build\devlibs\common-dev.jar
 [Architectury Transformer DEBUG] Transforming from me/sreeraj/pokemontoitem/PokemonToItem.class to me/sreeraj/pokemontoitem/PokemonToItem.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/PokemonToItem with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/PokemonToItem in 3.885 ms
+[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/PokemonToItem in 1.579 ms
 [Architectury Transformer DEBUG] Transforming from me/sreeraj/pokemontoitem/config/PokemonToItemConfig.class to me/sreeraj/pokemontoitem/config/PokemonToItemConfig.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/config/PokemonToItemConfig with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/config/PokemonToItemConfig in 3.054 ms
+[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/config/PokemonToItemConfig in 1.244 ms
 [Architectury Transformer DEBUG] Transforming from me/sreeraj/pokemontoitem/config/PokemonToItemConfig$1.class to me/sreeraj/pokemontoitem/config/PokemonToItemConfig$1.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/config/PokemonToItemConfig$1 with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/config/PokemonToItemConfig$1 in 660.8 ?s
+[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/config/PokemonToItemConfig$1 in 376.3 ?s
 [Architectury Transformer DEBUG] Transforming from me/sreeraj/pokemontoitem/permissions/PokemonToItemPermissions.class to me/sreeraj/pokemontoitem/permissions/PokemonToItemPermissions.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
 [Architectury Transformer DEBUG] Found class transformer
 [Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/permissions/PokemonToItemPermissions with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/permissions/PokemonToItemPermissions in 1.524 ms
-[Architectury Transformer DEBUG] Transforming from me/sreeraj/pokemontoitem/commands/PokeToItem.class to me/sreeraj/pokemontoitem/commands/PokeToItem.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/commands/PokeToItem with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/commands/PokeToItem in 1.037 ms
-[Architectury Transformer DEBUG] Transforming from me/sreeraj/pokemontoitem/commands/ItemToPoke.class to me/sreeraj/pokemontoitem/commands/ItemToPoke.class with 5 transformer(s) on dev.architectury.transformer.handler.TinyRemapperPreparedTransformerHandler
-[Architectury Transformer DEBUG] Found class transformer
-[Architectury Transformer DEBUG] Writing me/sreeraj/pokemontoitem/commands/ItemToPoke with maxs=true frames=true
-[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/commands/ItemToPoke in 1.231 ms
+[Architectury Transformer DEBUG] Transformed me/sreeraj/pokemontoitem/permissions/PokemonToItemPermissions in 721.8 ?s
