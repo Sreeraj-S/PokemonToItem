@@ -56,8 +56,8 @@ This mod addon enhances the Cobblemon experience for Minecraft version 1.20.1, o
 - As this is a beta release, anticipate and report bugs. If you find any issues, please create an issue on our GitHub repository.
 
 ## Permissions
-- `/poketoitem` permission: `pokemontoitem.command.poketoitem`
-- `/itemtopoke` permission: `pokemontoitem.command.itemtopoke`
+- `/poketoitem` permission: `cobblemon.pokemontoitem.command.poketoitem`
+- `/itemtopoke` permission: `cobblemon.pokemontoitem.command.itemtopoke`
 
 ## Media Gallery
 Feel free to visit our [Media Gallery](https://modrinth.com/mod/pokemontoitem/gallery) to view screenshots and images showcasing the Pokémon conversion process.
