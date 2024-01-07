@@ -12,6 +12,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtIo;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -60,6 +61,10 @@ public class ItemToPoke {
                             }
                         }
                     }
+                }
+                else{
+                    player.sendMessage(Text.of("[§2§lPokeToItem§f] §4§lYou don't have a Pokémon in your main hand!!!"));
+                    player.sendMessage(Text.of("[§2§lPokeToItem§f] Please place a Pokémon in your main hand and try again!"));
                 }
             }
             return 1;
