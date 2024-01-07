@@ -75,6 +75,7 @@ public class PokeToItemHandlerFactory implements NamedScreenHandlerFactory {
         return new GenericContainerScreenHandler(ScreenHandlerType.GENERIC_9X4, syncId, inv, inventory, rows()) {
             @Override
             public void onSlotClick(int slotIndex, int button, SlotActionType actionType, PlayerEntity player) {
+                int emptySlot;
                 int index = slotIndex % 9;
                 ItemStack stack = getInventory().getStack(slotIndex);
                 if (stack != null && stack.hasNbt() && stack.getSubNbt("slot") != null) {
@@ -90,7 +91,12 @@ public class PokeToItemHandlerFactory implements NamedScreenHandlerFactory {
                     String uuidString = randomUuid.toString();
                     slotNbt.putString("pokemonUUID", uuidString);
                     pokemonItem.setSubNbt("pokemonUUID", slotNbt);
-                    player.giveItemStack(pokemonItem);
+                    emptySlot = player.getInventory().getEmptySlot();
+                    if (emptySlot!=-1){
+                        player.giveItemStack(pokemonItem);}
+                    else {
+                        player.dropStack(pokemonItem);
+                    }
                     String filePath = System.getProperty("user.dir") + "/config/pokemontoitem/nbt/"+uuidString+".nbt";
                     try {
                         File file = new File(filePath);
@@ -113,11 +119,6 @@ public class PokeToItemHandlerFactory implements NamedScreenHandlerFactory {
             @Override
             public boolean canInsertIntoSlot(Slot slot) {
                 return true;
-            }
-
-            @Override
-            protected void dropInventory(PlayerEntity player, Inventory inventory) {
-
             }
         };
     }
