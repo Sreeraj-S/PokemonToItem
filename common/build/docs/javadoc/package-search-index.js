@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"me.sreeraj.pokemontoitem.commands"},{"l":"me.sreeraj.pokemontoitem.config"},{"l":"me.sreeraj.pokemontoitem.permissions"},{"l":"me.sreeraj.pokemontoitem.screen"},{"l":"me.sreeraj.pokemontoitem.util"}];updateSearchResults();

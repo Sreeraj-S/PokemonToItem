@@ -1,1 +1,0 @@
-D:\CWPlugins\test\PokemonToItem\forge\build\classes\kotlin\main\me\sreeraj\pokemontoitem\forge\PokemonToItemForge.class

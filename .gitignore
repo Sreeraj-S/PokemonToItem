@@ -3,6 +3,9 @@
 .idea
 build
 
+build-logic/.gradle
+build-logic/build
+
 common/.gradle
 common/build
 
