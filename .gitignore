@@ -1,7 +1,9 @@
 .gradle
 .idea
 build
-build-logic
+
+build-logic/.gradle
+build-logic/build
 
 common/.gradle
 common/build
