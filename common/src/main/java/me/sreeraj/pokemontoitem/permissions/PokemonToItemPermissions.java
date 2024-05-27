@@ -14,7 +14,7 @@ public class PokemonToItemPermissions {
 
     public PokemonToItemPermissions() {
         this.POKETOITEM_PERMISSION = new CobblemonPermission("pokemontoitem.command.poketoitem", toPermLevel(PokemonToItemConfig.COMMAND_POKETOITEM_PERMISSION_LEVEL));
-        this.ITEMTOPOKE_PERMISSION = new CobblemonPermission("pokemontoitem.command.poketoitem", toPermLevel(PokemonToItemConfig.COMMAND_ITEMTOPOKE_PERMISSION_LEVEL));
+        this.ITEMTOPOKE_PERMISSION = new CobblemonPermission("pokemontoitem.command.itemtopoke", toPermLevel(PokemonToItemConfig.COMMAND_ITEMTOPOKE_PERMISSION_LEVEL));
         }
 
     public PermissionLevel toPermLevel(int permLevel) {

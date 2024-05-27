@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/CWPlugins.test.PokemonToItem.pokemontoitem.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/CWPlugins.test.PokemonToItem.pokemontoitem.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/CWPlugins.test.PokemonToItem.pokemontoitem.common.main~4.iml" filepath="$PROJECT_DIR$/.idea/modules/common/CWPlugins.test.PokemonToItem.pokemontoitem.common.main~4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/CWPlugins.test.PokemonToItem.pokemontoitem.common.test~4.iml" filepath="$PROJECT_DIR$/.idea/modules/common/CWPlugins.test.PokemonToItem.pokemontoitem.common.test~4.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/pokemontoitem.common.test.iml" />
@@ -9,6 +12,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/pokemontoitem.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/pokemontoitem.fabric.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/pokemontoitem.forge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/pokemontoitem.forge.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/pokemontoitem.forge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/pokemontoitem.forge.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/test.PokemonToItem.fabric.pokemontoitem.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/test.PokemonToItem.fabric.pokemontoitem.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/test.PokemonToItem.fabric.pokemontoitem.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/test.PokemonToItem.fabric.pokemontoitem.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/test.PokemonToItem.forge.pokemontoitem.forge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/test.PokemonToItem.forge.pokemontoitem.forge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/forge/test.PokemonToItem.forge.pokemontoitem.forge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/forge/test.PokemonToItem.forge.pokemontoitem.forge.test.iml" />
     </modules>
   </component>
 </project>

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "pokemontoitem",
-  "version": "0.0.1_BETA+1.19.2",
+  "version": "0.1.2+1.19.2",
   "name": "PokemonToItem",
   "description": "Helps In Converting Pokemon To an Item and vis-versa",
   "authors": [
