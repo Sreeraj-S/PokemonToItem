@@ -20,7 +20,6 @@ repositories {
 dependencies {
     implementation(libs.stdlib)
     implementation(libs.reflect)
-
     modImplementation(libs.fabricLoader)
     modApi ("curse.maven:cobblemon-687131:4797468")
     modApi(libs.architectury)

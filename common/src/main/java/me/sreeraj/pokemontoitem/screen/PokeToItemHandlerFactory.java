@@ -8,12 +8,10 @@ import me.sreeraj.pokemontoitem.commands.PokeToItem;
 import me.sreeraj.pokemontoitem.util.PokemonUtility;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.nbt.NbtIo;
 import net.minecraft.network.packet.s2c.play.ScreenHandlerSlotUpdateS2CPacket;
 import net.minecraft.screen.GenericContainerScreenHandler;
 import net.minecraft.screen.NamedScreenHandlerFactory;
@@ -24,12 +22,10 @@ import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.UUID;
 
 public class PokeToItemHandlerFactory implements NamedScreenHandlerFactory {
-    private UUID randomUuid = UUID.randomUUID();
+
     public final PokeToItem.Session session;
 
 
@@ -76,7 +72,6 @@ public class PokeToItemHandlerFactory implements NamedScreenHandlerFactory {
             @Override
             public void onSlotClick(int slotIndex, int button, SlotActionType actionType, PlayerEntity player) {
                 int emptySlot;
-                int index = slotIndex % 9;
                 ItemStack stack = getInventory().getStack(slotIndex);
                 if (stack != null && stack.hasNbt() && stack.getSubNbt("slot") != null) {
                     int slot = stack.getSubNbt("slot").getInt("slot");
@@ -86,23 +81,14 @@ public class PokeToItemHandlerFactory implements NamedScreenHandlerFactory {
 
 
                     ItemStack pokemonItem = PokemonUtility.pokemonToItem(pokemon);
-                    NbtCompound slotNbt = pokemonItem.getOrCreateSubNbt("pokemonUUID");
-                    randomUuid = UUID.randomUUID();
-                    String uuidString = randomUuid.toString();
-                    slotNbt.putString("pokemonUUID", uuidString);
-                    pokemonItem.setSubNbt("pokemonUUID", slotNbt);
+                    NbtCompound pokemonNbt = pokemonItem.getOrCreateSubNbt("PokemonData");
+                    pokemonNbt.put("Data", nbt);
+                    pokemonItem.setSubNbt("PokemonData", pokemonNbt);
                     emptySlot = player.getInventory().getEmptySlot();
                     if (emptySlot!=-1){
                         player.giveItemStack(pokemonItem);}
                     else {
                         player.dropStack(pokemonItem);
-                    }
-                    String filePath = System.getProperty("user.dir") + "/config/pokemontoitem/nbt/"+uuidString+".nbt";
-                    try {
-                        File file = new File(filePath);
-                        NbtIo.writeCompressed(nbt, file);
-                    } catch (IOException e) {
-                        e.printStackTrace();
                     }
                     session.removePokemon(pokemon);
                     inventory.setStack(12 + slot + (slot >= 3 ? 6 : 0), ItemStack.EMPTY);
