@@ -1,0 +1,13 @@
+.gradle
+.architectury-transformer
+.idea
+build
+
+common/.gradle
+common/build
+
+fabric/.gradle
+fabric/build
+
+forge/.gradle
+forge/build
