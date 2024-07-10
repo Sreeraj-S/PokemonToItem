@@ -12,6 +12,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
+import net.minecraft.util.Hand;
 
 import static net.minecraft.server.command.CommandManager.literal;
 
@@ -38,7 +39,7 @@ public class ItemToPoke {
                     NbtCompound pokemonData = pokemonNbt.getCompound("Data");
                     pokemon.loadFromNBT(pokemonData);
                     party.add(pokemon);
-                    player.setStackInHand(player.getActiveHand(), ItemStack.EMPTY);
+                    player.setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
                 }
             } else {
                 player.sendMessage(Text.of("[§2§lPokeToItem§f] §4§lYou don't have a Pokémon in your main hand!!!"));
